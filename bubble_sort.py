@@ -23,4 +23,3 @@ print('Sorted elements are:')
 for j in range(n):
     print(str(list[j]))
     
-
