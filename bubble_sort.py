@@ -9,6 +9,8 @@ def sort(lst):
             if(lst[j]> lst[j+1]):
                 lst[j],lst[j+1]=lst[j+1],lst[j] 
                 swap=True
+        if (swap==False):
+            break
 
 '  list for sorting  '
 list=[]
@@ -21,3 +23,4 @@ print('Sorted elements are:')
 for j in range(n):
     print(str(list[j]))
     
+
