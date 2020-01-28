@@ -35,7 +35,7 @@ vector<int> sol(int num, int k){
         }
     }
     return vec;
-}
+} 
 
 int main()
 {
