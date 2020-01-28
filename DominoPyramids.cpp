@@ -4,27 +4,24 @@ using namespace std;
 	// function declaration 
 	bool IsDominoPyramidValid(int values[]);
 	bool CheckValuesOnRowAgainstRowBelow(int values[], int startOfCurrentRow, int currentRowLength);
+	static int DominoLength = 2;
 	
 
 int main()
 {
-	    		int values[] =  { 3, 4, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6,9,1,2,3,4,5,6,8 };
+	        int values[] =  { 3, 4, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6,9,1,2,3,4,5,6,8 };
                 bool result = IsDominoPyramidValid(values);
-            
-                cout <<endl<< result? "Yes" : "No";
-				return 0;
+               if(result == true)
+	      	     { cout<< endl << "Yes!"; }
+	        else { cout<<endl<<"No!"; }
+		return 0;
 }
 
-
-
-   
-                 
-       bool IsDominoPyramidValid(int values[])
+  bool IsDominoPyramidValid(int values[])
         {
             int arrayLength = sizeof(values); // returns length 
-			int DominoLength = 2;
             int offset = 0;
-            int currentRow = 1; // Start of row
+            int currentRow = 1; // Start of each row
             bool result = true;
             while (result)
             {
