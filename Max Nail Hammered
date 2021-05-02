@@ -1,0 +1,34 @@
+/******************************************************************************
+
+Here is Java code
+
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int[] A={1,1,3,3,4,4,4,5,5,6,6,6,6,6,6};
+		int k =2;
+		int result=doIt(A,k);
+		System.out.println(result);
+	}
+	
+public static int doIt(final int[] array, final int y) {
+    int best = 0;
+    int start = 0;
+    while (start < array.length) {
+        int end = start;
+        while (end < array.length && array[end] == array[start]) {
+            ++end;
+        }
+
+        // array[start .. (end-1)] is now the subarray consisting of a
+        // single value repeated (end-start) times.
+        best = Math.max(best, end - start + Math.min(y, array.length - end));
+
+        start = end; // skip to the next distinct value
+    }
+    assert best >= Math.min(y + 1, array.length); // sanity-check
+    return best;
+   }
+}
