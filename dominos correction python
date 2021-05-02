@@ -4,7 +4,7 @@ from collections import Counter
 def correct_domino(A):
     counter = set(list(Counter(A).values()))
     #counter = sum(set(list(Counter(A).values())))
-    if {1,2,3} == counter:
+    if {1,2,3} in counter:
     #if counter == 6:
         return 'Yes'
     else:
