@@ -1,0 +1,10 @@
+def days(s, k):
+    week_days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    k = k % 7
+    index = (week_days.index(s)) + k
+    index = index % 7
+    return week_days[index]
+
+
+if __name__ == '__main__':
+    print(days('Sat', 23))
