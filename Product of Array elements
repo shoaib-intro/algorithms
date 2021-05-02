@@ -1,0 +1,10 @@
+def prod(A):
+    product = 1
+    for i in range(len(A)):
+        product = product * A[i]
+    return product
+
+if __name__ == '__main__':
+    A = [1, 2, 0, -5]
+
+    print(prod(A))
