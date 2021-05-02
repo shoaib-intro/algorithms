@@ -1,0 +1,28 @@
+from collections import Counter
+
+
+def get_sum(A, k, l):
+    max_sum = 0
+    if len(A) < k + l:
+        print('Invalid')
+    else:
+        return (get_max(k) +  get_max(l))
+
+
+def get_max(i):
+    start = 0
+    step = 0
+    max_sum = 0
+    while (start + i) <= len(A):
+        max = sum(A[start:start + i])
+        if max_sum < max:
+            max_sum = max
+            step = start
+        start += 1
+    del A[step:step + i]
+    return max_sum
+
+
+if __name__ == '__main__':
+    A = [6, 1, 4, 6, 3, 2, 7, 4]
+    print(get_sum(A, 3, 2))
