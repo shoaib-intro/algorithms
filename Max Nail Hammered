@@ -31,4 +31,4 @@ public static int doIt(final int[] array, final int y) {
     assert best >= Math.min(y + 1, array.length); // sanity-check
     return best;
    }
-}
+} 
