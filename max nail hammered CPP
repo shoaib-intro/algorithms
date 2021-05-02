@@ -1,0 +1,17 @@
+int maxCount(vector<int>& A, int K) {
+    int n = A.size();
+    int best = 0;
+    int count = 1;
+
+    for (int i = 0; i < n-K-1; i++) {
+        if (A[i] == A[i + 1])
+            count = count + 1;
+        else
+            count = 1;
+        if (count > best)
+            best = count;
+    }
+    int result = max(best+K, min(K+1, n));
+    
+    return result;
+} 
