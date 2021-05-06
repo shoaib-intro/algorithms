@@ -1,0 +1,27 @@
+def max_sum(A):
+    digits = []
+    max = 0
+    for i in range(len(A)):
+        digit = [int(x) for x in str(A[i])]
+        digits.append(digit[0] + digit[1])
+
+    for i in range(len(digits)):
+        flag = True
+        step = 0
+        while flag:
+            if digits[i] == digits[step] and step != i:
+                if (A[i] + A[step]) > max:
+                    max = A[i] + A[step]
+            if step == i:
+                flag = False
+            step += 1
+    if max == 0:
+        return -1
+    else: return max
+
+
+if __name__ == '__main__':
+    A = [51, 71, 17, 42]
+    #A = [42, 33, 60]
+    #A = [51, 32, 43]
+    print(max_sum(A))
