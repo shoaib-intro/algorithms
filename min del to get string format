@@ -68,7 +68,7 @@ int solution2(const string & s) {
         }
     }
     return min_dels;
-}
+} 
 
 
 int main() {
