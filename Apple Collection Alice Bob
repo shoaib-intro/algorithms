@@ -1,10 +1,8 @@
-from collections import Counter
-
 
 def get_sum(A, k, l):
     max_sum = 0
     if len(A) < k + l:
-        print('Invalid')
+        return -1
     else:
         return (get_max(k) +  get_max(l))
 
@@ -25,4 +23,5 @@ def get_max(i):
 
 if __name__ == '__main__':
     A = [6, 1, 4, 6, 3, 2, 7, 4]
+    #A = [10,19,15]
     print(get_sum(A, 3, 2))
