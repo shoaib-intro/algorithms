@@ -50,3 +50,27 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+#Python Code
+
+
+def minStep(str) -> int:
+    charX = 'A'
+    numY = 0
+    minDel = 0
+    for i in range(0, len(str)):
+        if (charX == str[i]):
+            minDel = min(numY, minDel + 1)
+        else:
+            numY = numY + 1
+    return minDel
+
+
+if __name__ == '__main__':
+    print(minStep('BAAABAB'))
+
+
