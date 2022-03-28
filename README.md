@@ -6,4 +6,4 @@ useful links to follow
 - [Syntax and Basic Learning](https://www.w3schools.com/)
 - [Leet for programming and logical](https://leetcode.com/)
 
-> Author: Shoaib Ali (m.shoaib_ali@outlook.com)
+Author: Shoaib Ali (m.shoaib_ali@outlook.com)
